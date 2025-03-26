@@ -88,12 +88,16 @@ nav ul li a {
 .hero-text h2 {
     font-size: 48px;
     font-style: italic;
-    color: rgb(194, 110, 110);
-    font-weight: bold;
 }
 
 .hero-text p {
     font-size: 18px;
     font-style: italic;
     margin-top: 10px;
+}
+
+.nama {
+    font-size: 48px;
+    font-family: 'Brush Script MT', serif;
+    color: rgb(194, 110, 110); 
 }
