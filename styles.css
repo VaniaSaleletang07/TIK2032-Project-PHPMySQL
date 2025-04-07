@@ -92,7 +92,7 @@ nav ul li a {
 
 .hero-text p {
     font-size: 18px;
-    font-style: italic;
+    font-style: "Poppins", sans-serif;
     margin-top: 10px;
 }
 
@@ -100,4 +100,30 @@ nav ul li a {
     font-size: 48px;
     font-family: 'Brush Script MT', serif;
     color: rgb(194, 110, 110); 
+}
+
+.aboutme-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(194, 110, 110); 
+    margin-bottom: 10px;
+}
+
+.sosmed-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    gap: 20px;
+    padding-right: 40px;
+}
+
+.sosmed-icons a {
+    color: rgb(63, 60, 60);
+    font-size: 28px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.sosmed-icons a:hover {
+    color: rgb(194, 110, 110);
+    transform: scale(1.2);
 }
