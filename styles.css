@@ -126,6 +126,18 @@ nav ul li a {
     transform: scale(1.2);
 }
 
+.gallery {
+    text-align: center;
+    font-size: 3em;
+    color: rgb(194, 110, 110);
+}
+
+.foto {
+    text-align: center;
+    font-size: 1.8em;
+    color: rgb(194, 110, 110);
+]}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -163,7 +175,6 @@ nav ul li a {
     text-align: center;
     font-size: 2.5em;
     margin-top: 30px;
-    margin-bottom: 20px;
     color: rgb(194, 110, 110);
 }
 
