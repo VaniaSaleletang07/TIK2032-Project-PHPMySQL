@@ -85,11 +85,6 @@ nav ul li a {
     text-align: left;
 }
 
-.hero-text h2 {
-    font-size: 48px;
-    font-style: italic;
-}
-
 .hero-text p {
     font-size: 18px;
     font-family: "Poppins", sans-serif;
@@ -101,6 +96,7 @@ nav ul li a {
     font-weight: bold;
     font-family: 'Brush Script MT', serif;
     color: rgb(194, 110, 110); 
+    text-align: center;
 }
 
 .aboutme-title {
