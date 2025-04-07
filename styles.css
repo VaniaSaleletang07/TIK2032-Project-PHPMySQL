@@ -92,12 +92,13 @@ nav ul li a {
 
 .hero-text p {
     font-size: 18px;
-    font-style: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-top: 10px;
 }
 
 .nama {
     font-size: 48px;
+    font-weight: bold;
     font-family: 'Brush Script MT', serif;
     color: rgb(194, 110, 110); 
 }
@@ -106,6 +107,7 @@ nav ul li a {
     font-size: 48px;
     font-weight: bold;
     color: rgb(194, 110, 110); 
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -118,7 +120,7 @@ nav ul li a {
 }
 
 .sosmed-icons a {
-    color: rgb(63, 60, 60);
+    color: rgb(194, 110, 110);
     font-size: 28px;
     transition: transform 0.2s, color 0.2s;
 }
