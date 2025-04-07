@@ -125,3 +125,31 @@ nav ul li a {
     color: rgb(194, 110, 110);
     transform: scale(1.2);
 }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+  }
+  
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius: 12px;
+  }
+  
+  /* Hover zoom effect */
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
