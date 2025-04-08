@@ -1,15 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Monotype Corsiva', sans-serif;
-}
 
 body {
     background: linear-gradient(to bottom, #f8f4ee, #eae0d5);
     color: #333;
     text-align: center;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Monotype Corsiva', sans-serif;
 }
 
 header {
@@ -259,3 +257,50 @@ nav ul li a {
     }
   }
   
+  .artikel.container {
+    max-width: 850px;
+    margin: 40px auto;
+    background-color: rgb(194, 110, 110);
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+
+  .artikel.judul {
+    font-size: 2,5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .sumber-artikel {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .gambar-artikel {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+
+  .isi-artikel p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .linkkembali {
+    text-decoration: none;
+    color: rgb(194, 110, 110);
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+  }
+
