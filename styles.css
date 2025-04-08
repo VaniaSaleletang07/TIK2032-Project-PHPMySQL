@@ -257,16 +257,16 @@ nav ul li a {
     }
   }
   
-  .artikel.container {
+  .artikel-container {
     max-width: 850px;
     margin: 40px auto;
     background-color: rgb(194, 110, 110);
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
-  .artikel.judul {
+  .artikel-judul {
     font-size: 2,5rem;
     text-align: center;
     font-weight: bold;
@@ -293,6 +293,7 @@ nav ul li a {
     line-height: 1.8;
     font-size: 1rem;
     margin-bottom: 20px;
+    padding: 20px
     color: #333;
   }
   
@@ -302,5 +303,9 @@ nav ul li a {
     font-weight: bold;
     margin-top: 20px;
     display: inline-block;
+  }
+
+  .linkkembali:hover {
+    text-decoration: underline;
   }
 
