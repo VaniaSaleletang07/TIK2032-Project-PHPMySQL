@@ -60,10 +60,10 @@ nav ul li a {
 
 .hero-content {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 40px;
-    padding: 50px;
+    align-items: flex-start; 
+    gap: 60px;
+    padding-top: 30px; 
+    margin-top: 0;
 }
 
 .image-container {
@@ -74,10 +74,10 @@ nav ul li a {
 }
 
 .image-container img {
-    height: 100%;
-    max-height: 380px; 
-    border-radius: 15px;
+    width: 380px;      
+    height: 380px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .hero-text {
@@ -88,10 +88,12 @@ nav ul li a {
     text-align: justify;
     font-size: 1,2em;
     font-family: "Poppins", sans-serif;
-    margin-top: 10px;
+    margin: 0;
+    max-width: 800px;
 }
 
 .nama {
+    margin: 0;
     font-size: 3em;
     font-weight: bold;
     color: rgb(194, 110, 110); 
@@ -99,12 +101,13 @@ nav ul li a {
 }
 
 .tentangsaya {
+    margin-top: 10px;
+    margin-bottom: 20px;
     font-size: 2em;
     font-weight: bold;
     font-family: "Poppins", sans-serif;
     color: rgb(194, 110, 110); 
     text-align: center;
-    margin-bottom: 10px;
 }
 
 footer {
