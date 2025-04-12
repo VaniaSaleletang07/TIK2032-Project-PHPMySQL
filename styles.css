@@ -308,3 +308,29 @@ nav ul li a {
     text-decoration: underline;
   }
 
+  .contact-container {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: rgb(194, 110, 110);
+  }
+  
+  .icon-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .icon-column a {
+    color: rgb(194, 110, 110);
+    transition: color 0.3s;
+  }
+  
+  .icon-column a:hover {
+    color: rgb(194, 110, 110);
+  }
