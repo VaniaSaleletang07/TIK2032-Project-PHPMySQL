@@ -67,7 +67,9 @@ nav ul li a {
 }
 
 .image-container {
-    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -83,6 +85,7 @@ nav ul li a {
 }
 
 .hero-text p {
+    text-align: justify;
     font-size: 1,2em;
     font-family: "Poppins", sans-serif;
     margin-top: 10px;
