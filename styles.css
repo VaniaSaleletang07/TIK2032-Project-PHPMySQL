@@ -54,7 +54,7 @@ nav ul li a {
 
 .hero-banner {
     background-image: url('Galleryhtml/bg.jpeg');
-    position: relative; /* ← penting */
+    position: relative; 
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -73,8 +73,9 @@ nav ul li a {
 }
       
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid rgba(194, 110, 110); 
@@ -117,6 +118,7 @@ nav ul li a {
 
 .tentang-saya p {
     text-align: justify;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Responsif */
@@ -241,7 +243,7 @@ footer {
 }
   
 .blog {
-    padding-top: 0;
+    margin-top: 10px;
     margin-bottom: 20px;
     text-align: center;
     font-size: 3em;
