@@ -11,6 +11,8 @@ body {
 }
 
 header {
+    padding-bottom: 0;
+    margin-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -182,7 +184,8 @@ footer {
 }
   
 .blog {
-    margin-top: 10px;
+    padding-top: 0;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 3em;
     color: rgb(194, 110, 110);
