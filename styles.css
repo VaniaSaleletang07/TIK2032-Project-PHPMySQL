@@ -95,12 +95,13 @@ nav ul li a {
     }
 
 .main-content {
-    margin-top: 100px; 
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    align-items: flex-start;
+    gap: 80px;
     padding: 40px 20px;
+    max-width: 1000px;
+    margin: 100px auto 0 auto;
 }
 
 .tentang-saya {
@@ -141,6 +142,13 @@ nav ul li a {
     font-weight: bold;
     color: rgba(194, 110, 110); 
     margin-bottom: 30px;
+}
+
+.tentang-saya,
+.skills {
+    flex: 1;
+    max-width: 450px;
+    text-align: left;
 }
 
 .skill-bar {
@@ -186,12 +194,12 @@ footer {
 
 .sosmed-icons a {
     color: rgb(194, 110, 110);
-    font-size: 1,5em;
+    font-size: 2em;
     transition: transform 0.3s, color 0.3s;
 }
 
 .sosmed-icons a:hover {
-    color: rgb(194, 110, 110);
+    color: rgb(244, 244, 244);
     transform: scale(1.2);
 }
 
