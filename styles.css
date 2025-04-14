@@ -1,4 +1,3 @@
-
 body {
     background: linear-gradient(to bottom, #f8f4ee, #eae0d5);
     color: #333;
@@ -9,6 +8,7 @@ body {
     box-sizing: border-box;
     font-family: 'Monotype Corsiva', sans-serif;
 }
+
 
 header {
     padding-bottom: 0;
@@ -31,9 +31,9 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; 
     align-items: center;
-    padding: 20px 60px;
+    flex-grow: 1;
 }
 
 nav ul {
@@ -193,13 +193,13 @@ footer {
 }
 
 .sosmed-icons a {
-    color: rgb(194, 110, 110);
+    color: rgb(243, 235, 235);
     font-size: 2em;
     transition: transform 0.3s, color 0.3s;
 }
 
 .sosmed-icons a:hover {
-    color: rgb(244, 244, 244);
+    color: rgb(228, 87, 87);
     transform: scale(1.2);
 }
 
