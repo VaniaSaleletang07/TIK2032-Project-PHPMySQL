@@ -38,7 +38,8 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    border-left: 2px solid transparent;
 }
 
 nav ul li {
@@ -46,9 +47,36 @@ nav ul li {
 }
 
 nav ul li a {
+    position: relative;
     text-decoration: none;
     color: rgb(194, 110, 110);
     font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(194, 110, 110);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #a7444c; 
+}
+
+nav ul li:not(:last-child)::after {
+    content: '|';
+    margin-left: 20px;
+    color: rgb(194, 110, 110);
 }
 
 .hero-banner {
@@ -80,7 +108,7 @@ nav ul li a {
     border: 6px solid rgba(194, 110, 110); 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     position: absolute;
-    bottom: -80px; 
+    bottom: -100px; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -188,7 +216,7 @@ footer {
 }
 
 .sosmed-icons a:hover {
-    color: rgb(228, 87, 87);
+    color:#a7444c;
     transform: scale(1.2);
 }
 
