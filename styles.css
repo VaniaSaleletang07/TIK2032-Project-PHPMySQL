@@ -33,7 +33,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 20px 60px;
 }
 
 nav ul {
@@ -62,7 +62,6 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: -30px
 }
 
  .nama {
