@@ -269,7 +269,6 @@ footer {
   
 .blog {
     margin-top: 10px;
-    margin-bottom: 20px;
     text-align: center;
     font-size: 3em;
     color: rgb(194, 110, 110);
@@ -415,8 +414,9 @@ footer {
 }
   
 .contact-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 3em;
     color: rgb(194, 110, 110);
 }
   
