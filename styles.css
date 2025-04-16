@@ -220,6 +220,18 @@ footer {
     transform: scale(1.2);
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .gallery {
     margin-top: 10px;
     text-align: center;

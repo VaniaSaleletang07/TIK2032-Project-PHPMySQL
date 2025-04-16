@@ -7,9 +7,40 @@ document.addEventListener("DOMContentLoaded", function() {
       if (index < text.length) {
         typingElement.textContent += text.charAt(index);
         index++;
-        setTimeout(type, 100); // kecepatan mengetik
+        setTimeout(type, 100); 
       }
     }
   
     type();
   });
+
+
+
+const hiddenElements = document.querySelectorAll('.hidden');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            entry.target.classList.remove('hidden');
+        }
+    });
+}, { threshold: 0.1 });
+
+hiddenElements.forEach(el => observer.observe(el));
+
+
+const skillBars = document.querySelectorAll('.progress-bar');
+skillBars.forEach(bar => {
+    bar.style.width = '0%'; 
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const targetWidth = bar.textContent;
+                bar.style.width = targetWidth;
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(bar);
+});
