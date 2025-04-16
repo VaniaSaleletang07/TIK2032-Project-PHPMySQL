@@ -185,11 +185,12 @@ nav ul li:not(:last-child)::after {
   }
 
 .progress-bar {
+    box-sizing: border-box;
     background-color: #b55b63;
     height: 100%;
     color: #fff;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 5px;
     line-height: 25px;
     font-weight: bold;
     border-radius: 20px 0 0 20px;
