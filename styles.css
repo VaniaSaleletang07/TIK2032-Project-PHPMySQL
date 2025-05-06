@@ -161,6 +161,41 @@ nav ul li:not(:last-child)::after {
 
 /* Responsif */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(194, 110, 110, 0.3);
+  }
+
+  nav ul li a:last-child {
+    border-bottom: none;
+  }
+
   .main-content {
       flex-direction: column;
       align-items: center;
@@ -471,22 +506,36 @@ footer {
   header {
     flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px;
   }
 
   .title {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
+    margin-bottom: 10px;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 15px;
-    border-left: none;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
   }
 
   nav ul li a {
-    font-size: 1em;
+    display: block;
+    padding: 10px 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(194, 110, 110, 0.3);
+  }
+
+  nav ul li a:last-child {
+    border-bottom: none;
   }
 
   .hero-banner {
