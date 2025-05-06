@@ -465,3 +465,120 @@ footer {
 .icon-column a:hover {
     color: rgb(194, 110, 110);
 }
+
+/* desain responsif */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    border-left: none;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+  }
+
+  .hero-banner {
+    height: 200px;
+  }
+
+  .nama {
+    font-size: 2.5rem;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    bottom: -75px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .tentang-saya, .skills {
+    max-width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+  }
+
+  .blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  .sosmed-icons {
+    gap: 15px;
+  }
+
+  .sosmed-icons a {
+    font-size: 1.5em;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8em;
+  }
+
+  .nama {
+    font-size: 2rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    bottom: -60px;
+  }
+
+  .tentangsaya, .section-title {
+    font-size: 1.8em;
+  }
+
+  .progress-bar {
+    font-size: 0.8em;
+  }
+
+  .gallery {
+    font-size: 2em;
+  }
+
+  .foto {
+    font-size: 1.5em;
+  }
+
+  .blog {
+    font-size: 2em;
+  }
+
+  .contact-title {
+    font-size: 2em;
+  }
+}
