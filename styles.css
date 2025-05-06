@@ -667,32 +667,34 @@ footer {
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
+    padding: 10px 20px;
   }
 
   .title {
     font-size: 1.8em; 
-    text-align: center;
-    margin-bottom: 10px;
+    text-align: left;
+    margin: 0;
   }
 
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     gap: 10px;
     padding: 0;
+    margin: 0;
   }
 
   nav ul li {
-    width: auto;
-    text-align: center;
+    display: inline;
   }
 
   nav ul li a {
     font-size: 0.9em; 
-    padding: 8px 12px; 
+    padding: 5px 10px;
     text-decoration: none;
     color: rgb(194, 110, 110);
   }
