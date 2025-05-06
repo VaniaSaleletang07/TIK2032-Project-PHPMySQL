@@ -604,7 +604,27 @@ footer {
   }
 }
 
-/* Further adjustments for very small screens */
+/* navigasi untuk layar handphone */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+  }
+
+  nav ul li {
+    flex: 1 1 auto;
+    text-align: center; 
+  }
+
+  nav ul li a {
+    font-size: 0.9em; 
+    padding: 8px 12px; 
+    white-space: nowrap; 
+  }
+}
+
+/* penyesuaian layar */
 @media (max-width: 480px) {
   .title {
     font-size: 1.8em;
