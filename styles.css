@@ -41,19 +41,21 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
-    border-left: 2px solid transparent;
+    gap: 10px; 
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
+    position: relative;
 }
 
 nav ul li a {
-    position: relative;
+    font-size: 0.9em; 
+    padding: 5px 10px;
     text-decoration: none;
     color: rgb(194, 110, 110);
-    font-size: 1.2em;
     transition: color 0.3s ease;
 }
 
@@ -77,13 +79,16 @@ nav ul li a:hover {
     color: #a7444c; 
 }
 
-/* Garis pemisah antar item menu */
+/* garis pembatas menu */
 nav ul li:not(:last-child)::after {
     content: '|';
-    margin-left: 20px;
+    margin-left: 10px; 
     color: rgb(194, 110, 110);
+    position: absolute;
+    right: -5px; 
+    top: 50%;
+    transform: translateY(-50%); 
 }
-
 
 /* Hero Section */
 .hero-banner {
