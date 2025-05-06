@@ -714,3 +714,12 @@ footer {
     white-space: nowrap; 
   }
 }
+
+
+@media (max-width: 768px) {
+  nav ul li a {
+    font-size: 0.7em; 
+    padding: 4px 6px; 
+  }
+}
+
