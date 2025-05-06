@@ -1,3 +1,4 @@
+/*General styles*/
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@ body {
     font-family: 'Monotype Corsiva', sans-serif;
 }
 
-
+/* Header Section */
 header {
     padding-bottom: 0;
     margin-bottom: 0;
@@ -19,6 +20,7 @@ header {
     border-bottom: 3px solid rgb(194, 110, 110);
 }
 
+/* Judul di Header */
 .title {
     font-size: 3em;
     font-style: italic;
@@ -27,6 +29,7 @@ header {
     color: rgb(194, 110, 110);
 }
 
+/* Navigation menu */
 nav {
     display: flex;
     position: relative;
@@ -54,6 +57,7 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+/* Effect garis bawah saat hover */
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -73,12 +77,15 @@ nav ul li a:hover {
     color: #a7444c; 
 }
 
+/* Garis pemisah antar item menu */
 nav ul li:not(:last-child)::after {
     content: '|';
     margin-left: 20px;
     color: rgb(194, 110, 110);
 }
 
+
+/* Hero Section */
 .hero-banner {
     background-image: url('Galleryhtml/bg.jpeg');
     position: relative; 
@@ -91,6 +98,7 @@ nav ul li:not(:last-child)::after {
     flex-direction: column;
 }
 
+/* Nama di tengah banner */
  .nama {
     color: white;
     font-size: 4rem;
@@ -98,7 +106,8 @@ nav ul li:not(:last-child)::after {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     z-index: 1;
 }
-      
+
+/* PROFILE IMAGE */
 .profile-pic {
     width: 200px;
     height: 200px;
@@ -121,6 +130,7 @@ nav ul li:not(:last-child)::after {
     object-fit: cover;
     }
 
+/* MAIN CONTENT AREA */
 .main-content {
     display: flex;
     justify-content: center;
@@ -132,6 +142,7 @@ nav ul li:not(:last-child)::after {
     flex: 1;
 }
 
+/* Tentang Saya Section */
 .tentang-saya {
     max-width: 400px;
 }
@@ -156,6 +167,7 @@ nav ul li:not(:last-child)::after {
   }
 }
 
+/* Skills Section */
 .skills {
     max-width: 400px;
 }
@@ -197,6 +209,7 @@ nav ul li:not(:last-child)::after {
     transition: width 0.6s ease;
 }
 
+/* FOOTER SECTION */
 footer {
     text-align: center;
     padding: 20px;
@@ -221,6 +234,7 @@ footer {
     transform: scale(1.2);
 }
 
+/* ANIMASI SCROLL */
 .hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -232,7 +246,7 @@ footer {
     transform: translateY(0);
 }
 
-
+/* GALLERY SECTION */
 .gallery {
     margin-top: 10px;
     text-align: center;
@@ -269,7 +283,7 @@ footer {
     border-radius: 12px;
 }
   
- /* Hover zoom effect */
+ /* Hover efek zoom */
 .gallery-item:hover img {
     transform: scale(1.1);
 }
@@ -279,7 +293,8 @@ footer {
     margin: 50px auto;
     padding: 20px;
 }
-  
+
+/* BLOG SECTION */  
 .blog {
     margin-top: 10px;
     text-align: center;
@@ -356,7 +371,7 @@ footer {
     background-color: rgb(194, 110, 110);
 }
   
-/* Responsive */
+/* Responsive blog card */
 @media (max-width: 768px) {
     .blog-card {
       flex-direction: column;
@@ -368,7 +383,8 @@ footer {
       border-radius: 12px 12px 0 0;
     }
 }
-  
+
+/* ARTIKEL DETAIL PAGE */
 .artikel-container {
     max-width: 850px;
     margin: 40px auto;
@@ -421,6 +437,7 @@ footer {
     text-decoration: underline;
 }
 
+/* CONTACT SECTION */
 .contact-container {
     text-align: center;
     padding: 50px 20px;
