@@ -1,11 +1,12 @@
 <?php
-include 'dbKoneksi.php'; 
+include 'dbKoneksi.php'; // Include database connection
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $conn->real_escape_string($_POST['name']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $message = $conn->real_escape_string($_POST['message']);
+    $name = isset($_POST['name']) ? $conn->real_escape_string($_POST['name']) : '';
+    $email = isset($_POST['email']) ? $conn->real_escape_string($_POST['email']) : '';
+    $message = isset($_POST['message']) ? $conn->real_escape_string($_POST['message']) : '';
 
+    // Check if all fields are filled
     if (!empty($name) && !empty($email) && !empty($message)) {
         $sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
 
@@ -20,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn->close();
 } else {
-    header('Location: contact.html');
+    header('HTTP/1.1 405 Method Not Allowed');
+    echo "<h1>405 Method Not Allowed</h1>";
     exit;
 }
 ?>
