@@ -1,6 +1,7 @@
 <?php
 include 'dbKoneksi.php'; // Include database connection
 
+// Allow only POST requests
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = isset($_POST['name']) ? $conn->real_escape_string($_POST['name']) : '';
     $email = isset($_POST['email']) ? $conn->real_escape_string($_POST['email']) : '';
@@ -21,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn->close();
 } else {
+    // Return 405 Method Not Allowed for unsupported methods
     header('HTTP/1.1 405 Method Not Allowed');
     echo "<h1>405 Method Not Allowed</h1>";
     exit;
