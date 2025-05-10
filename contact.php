@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Personal Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">PORTOFOLIO</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <h1 class="contact-title">Kontak Saya</h1>
+	<main class="contact-container">    
+        <div class="icon-column">
+            <a href="mailto:vaniasaleletang07@gmail.com" target="_blank" title="Email">
+                <i class="fas fa-envelope fa-3x"></i>
+            </a>
+            <a href="https://wa.me/6281342149692" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp fa-3x"></i>
+            </a>
+            <a href="https://instagram.com/vniasthr" target="_blank" title="Instagram">
+                <i class="fab fa-instagram fa-3x"></i>
+            </a>
+            <a href="https://github.com/VaniaSaleletang07" target="_blank" title="GitHub">
+                <i class="fab fa-github fa-3x"></i>
+            </a>
+        </div>
+        <form action="submit_contact.php" method="POST" class="contact-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </main>    
+</body>
+</html>
