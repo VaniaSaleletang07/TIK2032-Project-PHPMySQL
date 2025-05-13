@@ -10,7 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $query = "INSERT INTO comments (article_id, name, comment) VALUES ('$id', '$name', '$comment')";
     if (mysqli_query($conn, $query)) {
-         echo "<script>showNotification('Komentar berhasil dikirim!');</script>";
+        // Panggil fungsi JavaScript untuk menampilkan notifikasi
+        echo "<script>showNotification('Komentar berhasil dikirim!');</script>";
     } else {
         echo "<script>showNotification('Terjadi kesalahan: " . mysqli_error($conn) . "');</script>";
     }
