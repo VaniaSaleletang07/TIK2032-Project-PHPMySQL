@@ -834,3 +834,29 @@ footer {
     font-size: 0.8em;
     color: #888;
 }
+
+/* Notifikasi */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Warna hijau untuk sukses */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
