@@ -929,3 +929,35 @@ footer.dark-mode {
 .dark-mode-toggle:hover {
     color: #a7444c;
 }
+
+/* Form Komentar */
+.komentar-form.dark-mode {
+    background-color: #1e1e1e; 
+    color: #e0e0e0;
+    border: 1px solid #333; 
+}
+
+/* Artikel Detail */
+.artikel-container.dark-mode {
+    background-color: #1e1e1e; /* Warna latar belakang artikel */
+    color: #e0e0e0; /* Warna teks artikel */
+}
+
+.gambar-artikel.dark-mode {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2); /* Bayangan gambar artikel */
+}
+
+/* Tombol Kembali */
+.linkkembali.dark-mode {
+    color: #a7444c; /* Warna tombol kembali */
+}
+
+.linkkembali.dark-mode:hover {    text-decoration: underline;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    body.dark-mode {
+        background-color: #181818; /* Warna latar belakang untuk layar kecil */
+    }
+}
