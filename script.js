@@ -60,15 +60,3 @@ skillBars.forEach(bar => {
     lightbox.classList.remove('show');
   });
 
-function showNotification(message) {
-    const notification = document.getElementById('notification');
-    notification.textContent = message; // Set pesan notifikasi
-    notification.classList.add('show');
-    notification.classList.remove('hidden');
-
-    // Hilangkan notifikasi setelah 3 detik
-    setTimeout(() => {
-        notification.classList.add('hidden');
-        notification.classList.remove('show');
-    }, 3000);
-}
