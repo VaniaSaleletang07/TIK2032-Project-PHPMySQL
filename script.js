@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cek apakah pengguna sudah mengaktifkan Dark Mode sebelumnya
     if (localStorage.getItem("dark-mode") === "enabled") {
         body.classList.add("dark-mode");
+        console.log("Dark mode diaktifkan dari localStorage.");
     }
 
     // Tambahkan event listener untuk tombol dark mode
@@ -74,9 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
             localStorage.setItem("dark-mode", "disabled"); // Simpan preferensi ke localStorage
+            console.log("Dark mode dinonaktifkan.");
         } else {
             body.classList.add("dark-mode");
             localStorage.setItem("dark-mode", "enabled"); // Simpan preferensi ke localStorage
+            console.log("Dark mode diaktifkan.");
         }
     });
 });
