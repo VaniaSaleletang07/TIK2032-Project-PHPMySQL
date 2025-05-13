@@ -28,7 +28,6 @@ $article = mysqli_fetch_assoc($result);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $article['title']; ?></title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <main class="artikel-container">
@@ -69,5 +68,7 @@ $article = mysqli_fetch_assoc($result);
         </div>
         <p><a href="blog.php" class="linkkembali">← Kembali ke Halaman Blog</a></p>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
