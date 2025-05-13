@@ -834,3 +834,44 @@ footer {
     font-size: 0.8em;
     color: #888;
 }
+
+/* Rating */
+.rating-form {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating-form h3 {
+    margin-bottom: 10px;
+    color: rgb(194, 110, 110);
+}
+
+.rating-form select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.rating-form button {
+    background-color: rgb(194, 110, 110);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rating-form button:hover {
+    background-color: #a7444c;
+}
+
+.rating-artikel {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 20px;
+}

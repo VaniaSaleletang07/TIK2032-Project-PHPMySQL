@@ -2,20 +2,24 @@
 
 include 'db.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $comment = mysqli_real_escape_string($conn, $_POST['comment']);
-
-    $query = "INSERT INTO comments (article_id, name, comment) VALUES ('$id', '$name', '$comment')";
-    if (mysqli_query($conn, $query)) {
-        echo "<p>Komentar berhasil dikirim!</p>";
-    } else {
-        echo "<p>Terjadi kesalahan: " . mysqli_error($conn) . "</p>";
-    }
-}
-
 $id = $_GET['id'];
 
+if (isset($_POST['submit_rating'])) {
+    $rating = (int)$_POST['rating'];
+
+    // Validasi rating
+    if ($rating >= 1 && $rating <= 5) {
+        // Update rating di database
+        $update_query = "UPDATE blog SET rating = (rating + $rating) / 2 WHERE id = $id";
+        if (mysqli_query($conn, $update_query)) {
+            echo "<p>Terima kasih atas rating Anda!</p>";
+        } else {
+            echo "<p>Terjadi kesalahan: " . mysqli_error($conn) . "</p>";
+        }
+    } else {
+        echo "<p>Rating tidak valid.</p>";
+    }
+}
 $query = "SELECT * FROM blog WHERE id = $id";
 $result = mysqli_query($conn, $query);
 $article = mysqli_fetch_assoc($result);
@@ -32,14 +36,13 @@ $article = mysqli_fetch_assoc($result);
 <body>
     <main class="artikel-container">
         <h1 class="judul-artikel"><?php echo $article['title']; ?></h1>
+        <p class="rating-artikel">Rating Artikel: <?php echo number_format($article['rating'], 1); ?> / 5</p>
         <p class="sumber-artikel">Dipublikasikan pada <?php echo $article['created_at']; ?></p>
         <img src="<?php echo $article['image']; ?>" alt="<?php echo $article['title']; ?>" class="gambar-artikel">
         <div class="isi-artikel">
             <p><?php echo nl2br($article['content']); ?></p>
         </div>
-
-
-
+         
         <div class="komentar-form">
             <h3>Tinggalkan Komentar Disini</h3>
             <form method="POST" action="">
@@ -80,7 +83,7 @@ $article = mysqli_fetch_assoc($result);
                 <button type="submit" name="submit_rating">Kirim Rating</button>
             </form>
         </div>
-        
+
         <p><a href="blog.php" class="linkkembali">← Kembali ke Halaman Blog</a></p>
     </main>
 
