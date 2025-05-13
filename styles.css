@@ -875,3 +875,10 @@ footer {
     color: #444;
     margin-bottom: 20px;
 }
+
+.blog-content .rating-artikel {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+    font-weight: bold;
+}

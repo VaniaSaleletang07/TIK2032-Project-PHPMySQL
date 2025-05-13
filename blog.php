@@ -26,17 +26,19 @@ $result = mysqli_query($conn, $query);
         </nav>
     </header>
     <h1 class="blog">Blog</h1>
-    <div class="blog-container">
-        <?php while ($row = mysqli_fetch_assoc($result)): ?>
-            <article class="blog-card">
-                <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
-                <div class="blog-content">
-                    <h2><?php echo $row['title']; ?></h2>
-                    <p><?php echo substr($row['content'], 0, 100); ?>...</p>
-                    <a href="artikel.php?id=<?php echo $row['id']; ?>" class="read-more">Baca Selengkapnya</a>
-                </div>
-            </article>
-        <?php endwhile; ?>
-    </div>
+ <div class="blog-container">
+    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+        <article class="blog-card">
+            <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
+            <div class="blog-content">
+                <h2><?php echo $row['title']; ?></h2>
+                <p><?php echo substr($row['content'], 0, 100); ?>...</p>
+                <!-- Tambahkan Rating Artikel -->
+                <p class="rating-artikel">Rating: <?php echo number_format($row['rating'], 1); ?> / 5</p>
+                <a href="artikel.php?id=<?php echo $row['id']; ?>" class="read-more">Baca Selengkapnya</a>
+            </div>
+        </article>
+    <?php endwhile; ?>
+  </div>
 </body>
 </html>
