@@ -41,7 +41,6 @@ $article = mysqli_fetch_assoc($result);
 
         <div id="notification" class="notification hidden"></div>
         
-
         <div class="komentar-form">
             <h3>Tinggalkan Komentar Disini</h3>
             <form method="POST" action="">
@@ -55,7 +54,6 @@ $article = mysqli_fetch_assoc($result);
         // Ambil komentar berdasarkan ID artikel
         $comments_query = "SELECT * FROM comments WHERE article_id = $id ORDER BY created_at ASC";
         $comments_result = mysqli_query($conn, $comments_query);
-        echo "ID Artikel: " . $id;
         ?>
 
         <div class="komentar-list">
