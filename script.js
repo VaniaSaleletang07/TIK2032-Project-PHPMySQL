@@ -62,7 +62,7 @@ skillBars.forEach(bar => {
 
 function showNotification(message) {
     const notification = document.getElementById('notification');
-    notification.textContent = message; 
+    notification.textContent = message; // Set pesan notifikasi
     notification.classList.add('show');
     notification.classList.remove('hidden');
 
