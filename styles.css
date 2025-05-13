@@ -882,3 +882,45 @@ footer {
     margin: 5px 0;
     font-weight: bold;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+    border-bottom: 3px solid #333;
+}
+
+nav ul li a.dark-mode {
+    color: #e0e0e0;
+}
+
+.blog-card.dark-mode {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.blog-card.dark-mode:hover {
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
+}
+
+footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: #a7444c;
+}
