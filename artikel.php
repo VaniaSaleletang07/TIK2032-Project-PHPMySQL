@@ -37,6 +37,9 @@ $article = mysqli_fetch_assoc($result);
         <div class="isi-artikel">
             <p><?php echo nl2br($article['content']); ?></p>
         </div>
+
+        <div id="notification" class="notification hidden"></div>
+        
         <div class="komentar-form">
             <h3>Tinggalkan Komentar Disini</h3>
             <form method="POST" action="">
@@ -57,7 +60,7 @@ $article = mysqli_fetch_assoc($result);
             <h3>Komentar</h3>
             <?php while ($comment = mysqli_fetch_assoc($comments_result)): ?>
                 <div class="komentar-item">
-                    <p><strong><?php echo htmlspecialchars($comment['name']); ?></strong> berkata:</p>
+                    <p><strong><?php echo htmlspecialchars($comment['name']); ?></strong> :</p>
                     <p><?php echo nl2br(htmlspecialchars($comment['comment'])); ?></p>
                     <p class="komentar-tanggal"><?php echo $comment['created_at']; ?></p>
                 </div>
