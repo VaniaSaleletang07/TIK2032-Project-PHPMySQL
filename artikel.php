@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $query = "INSERT INTO comments (article_id, name, comment) VALUES ('$id', '$name', '$comment')";
     if (mysqli_query($conn, $query)) {
-        echo "<p>Komentar berhasil dikirim!</p>";
+         echo "<script>showNotification('Komentar berhasil dikirim!');</script>";
     } else {
-        echo "<p>Terjadi kesalahan: " . mysqli_error($conn) . "</p>";
+        echo "<script>showNotification('Terjadi kesalahan: " . mysqli_error($conn) . "');</script>";
     }
 }
 
@@ -39,7 +39,7 @@ $article = mysqli_fetch_assoc($result);
         </div>
 
         <div id="notification" class="notification hidden"></div>
-        
+
         <div class="komentar-form">
             <h3>Tinggalkan Komentar Disini</h3>
             <form method="POST" action="">
