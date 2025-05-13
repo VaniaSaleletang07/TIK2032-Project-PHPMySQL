@@ -59,3 +59,17 @@ skillBars.forEach(bar => {
   lightbox.addEventListener('click', () => {
     lightbox.classList.remove('show');
   });
+
+
+function showNotification(message) {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.classList.add('show');
+    notification.classList.remove('hidden');
+
+    // Hilangkan notifikasi setelah 3 detik
+    setTimeout(() => {
+        notification.classList.add('hidden');
+        notification.classList.remove('show');
+    }, 3000);
+}
