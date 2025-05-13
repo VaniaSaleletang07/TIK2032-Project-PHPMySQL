@@ -24,6 +24,7 @@ $result = mysqli_query($conn, $query);
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
     </header>
     <h1 class="blog">Blog</h1>
  <div class="blog-container">
