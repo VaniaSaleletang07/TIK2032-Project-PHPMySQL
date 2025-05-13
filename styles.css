@@ -857,5 +857,5 @@ footer {
 }
 
 .notification.hidden {
-    opacity: 0;
+    opacity: 50;
 }
