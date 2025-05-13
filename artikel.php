@@ -40,6 +40,7 @@ $article = mysqli_fetch_assoc($result);
         </div>
 
         <div id="notification" class="notification hidden"></div>
+        
 
         <div class="komentar-form">
             <h3>Tinggalkan Komentar Disini</h3>
