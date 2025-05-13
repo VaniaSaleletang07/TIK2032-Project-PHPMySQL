@@ -69,13 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
         body.classList.add("dark-mode");
     }
 
+    // Tambahkan event listener untuk tombol dark mode
     toggleButton.addEventListener("click", function () {
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
-            localStorage.setItem("dark-mode", "disabled");
+            localStorage.setItem("dark-mode", "disabled"); // Simpan preferensi ke localStorage
         } else {
             body.classList.add("dark-mode");
-            localStorage.setItem("dark-mode", "enabled");
+            localStorage.setItem("dark-mode", "enabled"); // Simpan preferensi ke localStorage
         }
     });
 });
