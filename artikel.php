@@ -2,6 +2,8 @@
 
 include 'db.php';
 
+$id = $_GET['id'];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $comment = mysqli_real_escape_string($conn, $_POST['comment']);
@@ -14,10 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Ambil ID artikel dari URL
-$id = $_GET['id'];
-
-// Query untuk mendapatkan artikel berdasarkan ID
 $query = "SELECT * FROM blog WHERE id = $id";
 $result = mysqli_query($conn, $query);
 $article = mysqli_fetch_assoc($result);
@@ -43,15 +41,16 @@ $article = mysqli_fetch_assoc($result);
             <h3>Tinggalkan Komentar Disini</h3>
             <form method="POST" action="">
                 <input type="text" name="name" placeholder="Nama Anda" required>
-                <textarea name="comment" placeholder="Komentar Anda" required></textarea>
+                <textarea name="comment" placeholder="Tulis Tanggapan Anda" required></textarea>
                 <button type="submit">Kirim</button>
             </form>
         </div>
 
         <?php
         // Ambil komentar berdasarkan ID artikel
-        $comments_query = "SELECT * FROM comments WHERE article_id = $id ORDER BY created_at DESC";
+        $comments_query = "SELECT * FROM comments WHERE article_id = $id ORDER BY created_at ASC";
         $comments_result = mysqli_query($conn, $comments_query);
+        echo "ID Artikel: " . $id;
         ?>
 
         <div class="komentar-list">
