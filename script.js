@@ -71,15 +71,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Tambahkan event listener untuk tombol dark mode
-    toggleButton.addEventListener("click", function () {
-        if (body.classList.contains("dark-mode")) {
-            body.classList.remove("dark-mode");
-            localStorage.setItem("dark-mode", "disabled"); // Simpan preferensi ke localStorage
-            console.log("Dark mode dinonaktifkan.");
-        } else {
-            body.classList.add("dark-mode");
-            localStorage.setItem("dark-mode", "enabled"); // Simpan preferensi ke localStorage
-            console.log("Dark mode diaktifkan.");
-        }
-    });
+    if (toggleButton) {
+        toggleButton.addEventListener("click", function () {
+            if (body.classList.contains("dark-mode")) {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("dark-mode", "disabled"); // Simpan preferensi ke localStorage
+                console.log("Dark mode dinonaktifkan.");
+            } else {
+                body.classList.add("dark-mode");
+                localStorage.setItem("dark-mode", "enabled"); // Simpan preferensi ke localStorage
+                console.log("Dark mode diaktifkan.");
+            }
+        });
+    } else {
+        console.error("Tombol dark mode tidak ditemukan di halaman ini.");
+    }
 });
