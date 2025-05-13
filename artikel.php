@@ -2,6 +2,18 @@
 
 include 'db.php';
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $comment = mysqli_real_escape_string($conn, $_POST['comment']);
+
+    $query = "INSERT INTO comments (article_id, name, comment) VALUES ('$id', '$name', '$comment')";
+    if (mysqli_query($conn, $query)) {
+        echo "<p>Komentar berhasil dikirim!</p>";
+    } else {
+        echo "<p>Terjadi kesalahan: " . mysqli_error($conn) . "</p>";
+    }
+}
+
 // Ambil ID artikel dari URL
 $id = $_GET['id'];
 
@@ -34,6 +46,23 @@ $article = mysqli_fetch_assoc($result);
                 <textarea name="comment" placeholder="Komentar Anda" required></textarea>
                 <button type="submit">Kirim</button>
             </form>
+        </div>
+
+        <?php
+        // Ambil komentar berdasarkan ID artikel
+        $comments_query = "SELECT * FROM comments WHERE article_id = $id ORDER BY created_at DESC";
+        $comments_result = mysqli_query($conn, $comments_query);
+        ?>
+
+        <div class="komentar-list">
+            <h3>Komentar</h3>
+            <?php while ($comment = mysqli_fetch_assoc($comments_result)): ?>
+                <div class="komentar-item">
+                    <p><strong><?php echo htmlspecialchars($comment['name']); ?></strong> berkata:</p>
+                    <p><?php echo nl2br(htmlspecialchars($comment['comment'])); ?></p>
+                    <p class="komentar-tanggal"><?php echo $comment['created_at']; ?></p>
+                </div>
+            <?php endwhile; ?>
         </div>
         <p><a href="blog.php" class="linkkembali">← Kembali ke Halaman Blog</a></p>
     </main>
