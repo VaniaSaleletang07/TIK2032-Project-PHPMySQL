@@ -838,25 +838,24 @@ footer {
 /* Notifikasi */
 .notification {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 50%; /* Posisikan di tengah layar secara vertikal */
+    left: 50%; /* Posisikan di tengah layar secara horizontal */
+    transform: translate(-50%, -50%); /* Pastikan elemen benar-benar di tengah */
     background-color: #4caf50; /* Warna hijau untuk sukses */
     color: white;
-    padding: 15px 20px;
+    padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 1rem;
+    font-size: 1.2rem;
     opacity: 0;
-    transform: translateY(20px);
+    z-index: 1000; /* Pastikan elemen berada di atas elemen lainnya */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .notification.show {
     opacity: 1;
-    transform: translateY(0);
 }
 
 .notification.hidden {
     opacity: 0;
-    transform: translateY(20px);
 }
