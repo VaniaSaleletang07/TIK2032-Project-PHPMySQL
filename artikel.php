@@ -2,20 +2,19 @@
 
 include 'db.php';
 
-$id = $_GET['id'];
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $comment = mysqli_real_escape_string($conn, $_POST['comment']);
 
     $query = "INSERT INTO comments (article_id, name, comment) VALUES ('$id', '$name', '$comment')";
     if (mysqli_query($conn, $query)) {
-        // Panggil fungsi JavaScript untuk menampilkan notifikasi
-        echo "<script>showNotification('Komentar berhasil dikirim!');</script>";
+        echo "<p>Komentar berhasil dikirim!</p>";
     } else {
-        echo "<script>showNotification('Terjadi kesalahan: " . mysqli_error($conn) . "');</script>";
+        echo "<p>Terjadi kesalahan: " . mysqli_error($conn) . "</p>";
     }
 }
+
+$id = $_GET['id'];
 
 $query = "SELECT * FROM blog WHERE id = $id";
 $result = mysqli_query($conn, $query);
@@ -39,8 +38,8 @@ $article = mysqli_fetch_assoc($result);
             <p><?php echo nl2br($article['content']); ?></p>
         </div>
 
-        <div id="notification" class="notification hidden"></div>
-        
+
+
         <div class="komentar-form">
             <h3>Tinggalkan Komentar Disini</h3>
             <form method="POST" action="">
