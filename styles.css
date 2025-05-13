@@ -894,6 +894,11 @@ header.dark-mode {
     border-bottom: 3px solid #333;
 }
 
+footer.dark-mode {
+    background-color: #1e1e1e; /* Warna footer gelap */
+    color: #e0e0e0; /* Warna teks footer */
+}
+
 nav ul li a.dark-mode {
     color: #e0e0e0;
 }

@@ -60,30 +60,22 @@ skillBars.forEach(bar => {
     lightbox.classList.remove('show');
   });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("dark-mode-toggle");
-    const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleDarkMode = document.getElementById("dark-mode-toggle");
+    const allElements = document.querySelectorAll("*");
 
-    // Cek apakah pengguna sudah mengaktifkan Dark Mode sebelumnya
-    if (localStorage.getItem("dark-mode") === "enabled") {
-        body.classList.add("dark-mode");
-        console.log("Dark mode diaktifkan dari localStorage.");
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
     }
 
-    // Tambahkan event listener untuk tombol dark mode
-    if (toggleButton) {
-        toggleButton.addEventListener("click", function () {
-            if (body.classList.contains("dark-mode")) {
-                body.classList.remove("dark-mode");
-                localStorage.setItem("dark-mode", "disabled"); // Simpan preferensi ke localStorage
-                console.log("Dark mode dinonaktifkan.");
-            } else {
-                body.classList.add("dark-mode");
-                localStorage.setItem("dark-mode", "enabled"); // Simpan preferensi ke localStorage
-                console.log("Dark mode diaktifkan.");
-            }
-        });
-    } else {
-        console.error("Tombol dark mode tidak ditemukan di halaman ini.");
-    }
+    toggleDarkMode.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
 });
