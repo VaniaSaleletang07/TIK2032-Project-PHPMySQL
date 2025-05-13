@@ -65,6 +65,22 @@ $article = mysqli_fetch_assoc($result);
                 </div>
             <?php endwhile; ?>
         </div>
+
+        <div class="rating-form">
+            <h3>Beri Rating Artikel Ini</h3>
+            <form method="POST" action="">
+                <label for="rating">Pilih Rating:</label>
+                <select name="rating" id="rating" required>
+                    <option value="1">1 - Sangat Buruk</option>
+                    <option value="2">2 - Buruk</option>
+                    <option value="3">3 - Cukup</option>
+                    <option value="4">4 - Baik</option>
+                    <option value="5">5 - Sangat Baik</option>
+                </select>
+                <button type="submit" name="submit_rating">Kirim Rating</button>
+            </form>
+        </div>
+        
         <p><a href="blog.php" class="linkkembali">← Kembali ke Halaman Blog</a></p>
     </main>
 
