@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-$query = "SELECT * FROM blog ORDER BY created_at DESC";
+$query = "SELECT * FROM blog ORDER BY created_at ASC";
 $result = mysqli_query($conn, $query);
 ?>
 
