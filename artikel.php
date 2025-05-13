@@ -27,6 +27,14 @@ $article = mysqli_fetch_assoc($result);
         <div class="isi-artikel">
             <p><?php echo nl2br($article['content']); ?></p>
         </div>
+        <div class="komentar-form">
+            <h3>Tinggalkan Komentar Disini</h3>
+            <form method="POST" action="">
+                <input type="text" name="name" placeholder="Nama Anda" required>
+                <textarea name="comment" placeholder="Komentar Anda" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
         <p><a href="blog.php" class="linkkembali">← Kembali ke Halaman Blog</a></p>
     </main>
 </body>
