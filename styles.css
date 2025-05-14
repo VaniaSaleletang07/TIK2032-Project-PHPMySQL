@@ -1,15 +1,50 @@
+
+/* Default (Light Mode) Colors */
+:root {
+    --bg-color: #fefaf6;
+    --text-color: #444;
+    --header-bg-color: rgb(194, 110, 110);
+    --header-text-color: #fff;
+    --nav-bg-color: #fff;
+    --nav-text-color: rgb(194, 110, 110);
+    --link-color: rgb(194, 110, 110);
+    --link-hover-color: #a7444c;
+    --container-bg-color: #fff;
+    --container-shadow-color: rgba(0, 0, 0, 0.1);
+    --footer-bg-color: rgb(194, 110, 110);
+    --footer-text-color: #fff;
+}
+
+/* Dark Mode Colors */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg-color: #1e1e1e;
+    --header-text-color: #ffffff;
+    --nav-bg-color: #1c1c1c;
+    --nav-text-color: #e0e0e0;
+    --link-color: #64b5f6;
+    --link-hover-color: #42a5f5;
+    --container-bg-color: #1e1e1e;
+    --container-shadow-color: rgba(255, 255, 255, 0.1);
+    --footer-bg-color: #1c1c1c;
+    --footer-text-color: #e0e0e0;
+}
+
 /*General styles*/
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #fefaf6;
-    color: #444;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: 'Monotype Corsiva', sans-serif;
 }
 
 /* Header Section */
 header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
     padding-bottom: 0;
     margin-bottom: 0;
     display: flex;
@@ -17,7 +52,7 @@ header {
     align-items: center;
     padding: 15px 50px;
     position: relative;
-    border-bottom: 3px solid rgb(194, 110, 110);
+    border-bottom: 3px solid var(--header-bg-color);
 }
 
 /* Judul di Header */
@@ -26,7 +61,7 @@ header {
     font-style: italic;
     font-weight: bold;
     position: relative;
-    color: rgb(194, 110, 110);
+    color: var(--header-text-color);
 }
 
 /* Navigation menu */
@@ -55,7 +90,7 @@ nav ul li a {
     font-size: 0.9em; 
     padding: 5px 10px;
     text-decoration: none;
-    color: rgb(194, 110, 110);
+    color: var(--nav-text-color);
     transition: color 0.3s ease;
 }
 
@@ -67,7 +102,7 @@ nav ul li a::after {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background-color: rgb(194, 110, 110);
+    background-color: var(--nav-bg-color);
     transition: width 0.3s ease;
 }
 
@@ -76,14 +111,14 @@ nav ul li a:hover::after {
 }
 
 nav ul li a:hover {
-    color: #a7444c; 
+    color: var(--link-hover-color);
 }
 
 /* garis pembatas menu */
 nav ul li:not(:last-child)::after {
     content: '|';
     margin-left: 10px; 
-    color: rgb(194, 110, 110);
+    color: var(--nav-text-color);
     position: absolute;
     right: -5px; 
     top: 50%;
@@ -92,6 +127,8 @@ nav ul li:not(:last-child)::after {
 
 /* Hero Section */
 .hero-banner {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
     background-image: url('Galleryhtml/bg.jpeg');
     position: relative; 
     background-size: cover;
@@ -105,10 +142,10 @@ nav ul li:not(:last-child)::after {
 
 /* Nama di tengah banner */
  .nama {
-    color: white;
+    color: var(--text-color);
     font-size: 4rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px var(--container-shadow-color); 
     z-index: 1;
 }
 
@@ -119,8 +156,8 @@ nav ul li:not(:last-child)::after {
     margin-top: 10px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid rgba(194, 110, 110); 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 6px solid var(--container-shadow-color); 
+    box-shadow: 0 4px 12px var(--container-shadow-colorer-bg-color);
     position: absolute;
     bottom: -100px; 
     left: 50%;
@@ -155,7 +192,7 @@ nav ul li:not(:last-child)::after {
 .tentangsaya {
     font-size: 2.5em;
     font-weight: bold;
-    color: rgba(194, 110, 110); 
+    color: var(--nav-text-color);
     margin-bottom: 20px;
 }
 
@@ -209,7 +246,7 @@ nav ul li:not(:last-child)::after {
 .section-title {
     font-size: 2.5em;
     font-weight: bold;
-    color: rgba(194, 110, 110); 
+    color: var(--text-color); 
     margin-bottom: 30px;
 }
 
@@ -224,7 +261,7 @@ nav ul li:not(:last-child)::after {
 }
 
 .progress {
-    background-color: #ddd;
+    background-color: var(--bg-color);
     border-radius: 20px;
     overflow: hidden;
     height: 25px;
@@ -232,9 +269,9 @@ nav ul li:not(:last-child)::after {
 
 .progress-bar {
     box-sizing: border-box;
-    background-color: #b55b63;
+    background-color: var(--bg-color);
     height: 100%;
-    color: #fff;
+    color: var(--nav-text-color);
     text-align: right;
     padding-right: 5px;
     line-height: 25px;
@@ -247,7 +284,8 @@ nav ul li:not(:last-child)::after {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgb(194, 110, 110); 
+    background-color: var(n--footer-bg-color); 
+    color: var(--footer-text-color);
 }
 
 .sosmed-icons {
@@ -258,13 +296,13 @@ footer {
 }
 
 .sosmed-icons a {
-    color: rgb(243, 235, 235);
+    color: var(--footer-text-color);
     font-size: 2em;
     transition: transform 0.3s, color 0.3s;
 }
 
 .sosmed-icons a:hover {
-    color:#a7444c;
+    color: var(--link-hover-color);
     transform: scale(1.2);
 }
 
@@ -285,13 +323,13 @@ footer {
     margin-top: 10px;
     text-align: center;
     font-size: 3em;
-    color: rgb(194, 110, 110);
+    color: var(--nav-text-color);
 }
 
 .foto {
     text-align: center;
     font-size: 1.8em;
-    color: rgb(194, 110, 110);
+    color: var(--nav-text-color);
 }
 
 .gallery-grid {
@@ -305,7 +343,7 @@ footer {
 .gallery-item {
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px var(--container-shadow-color);
     transition: transform 0.3s ease;
 }
   
@@ -333,23 +371,23 @@ footer {
     margin-top: 10px;
     text-align: center;
     font-size: 3em;
-    color: rgb(194, 110, 110);
+    color: var(--link-hover-color);
 }
 
 .blog-card {
     display: flex;
     gap: 20px;
     margin-bottom: 40px;
-    background-color: #fff;
+    background-color: var(--container-bg-color);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--container-shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
   
 .blog-card:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 18px var(--container-shadow-color);
 }
   
 .blog-card img {
@@ -366,6 +404,7 @@ footer {
 }
   
 .blog-content h2 {
+    color: var(--text-color);
     margin: 0 0 10px;
     font-size: 20px;
 }
@@ -375,17 +414,17 @@ footer {
 }
   
 .blog-content h2 a {
-    color: #333;
+    color: var(--text-color);
     font-family: "Poppins", sans-serif;
 }
   
 .blog-content h2 a:hover {
-    color: rgb(194, 110, 110);
+    color: var(--link-hover-color);
 }
   
 .blog-content p {
     margin: 0 0 10px;
-    color: #555;
+    color: var(--text-color);
     font-size: 15px;
     font-family: "Poppins", sans-serif;
     line-height: 1.5;
@@ -393,17 +432,17 @@ footer {
   
 .read-more {
     display: inline-block;
-    background-color:rgb(194, 110, 110);
-    color: #fff;
+    background-color: var(--link-hover-color);
+    color: var(--text-color);
     padding: 8px 14px;
     border-radius: 8px;
     font-size: 14px;
     transition: background-color 0.3s ease;
-}
+ }
   
 .read-more:hover {
-    background-color: rgb(194, 110, 110);
-}
+    background-color: var(--link-hover-color);
+ }
   
 /* Responsive blog card */
 @media (max-width: 768px) {
@@ -422,9 +461,9 @@ footer {
 .artikel-container {
     max-width: 850px;
     margin: 40px auto;
-    background-color: rgb(228, 214, 214);
+    background-color: var(--container-bg-color);
     padding: 40px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px var(--container-shadow-color);
     border-radius: 12px;
 }
 
@@ -438,7 +477,7 @@ footer {
 .sumber-artikel {
     text-align: center;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color);
     margin-bottom: 30px;
 }
 
@@ -447,7 +486,7 @@ footer {
     margin: 0 auto 30px auto;
     max-width: 300px;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 15px var(--container-shadow-color);
 }
 
 .isi-artikel p {
@@ -461,7 +500,7 @@ footer {
   
 .linkkembali {
     text-decoration: none;
-    color: rgb(194, 110, 110);
+    color: var(--link-hover-color);
     font-weight: bold;
     margin-top: 20px;
     display: inline-block;
@@ -481,7 +520,7 @@ footer {
     margin-top: 10px;
     text-align: center;
     font-size: 3em;
-    color: rgb(194, 110, 110);
+    color: var(--link-hover-color);
 }
   
 .icon-column {
@@ -492,12 +531,12 @@ footer {
 }
   
 .icon-column a {
-    color: rgb(194, 110, 110);
+    color: var(--link-hover-color);
     transition: color 0.3s;
 }
   
 .icon-column a:hover {
-    color: rgb(194, 110, 110);
+    color: var(--link-hover-color);
 }
 
 /* Style form contact*/
@@ -505,9 +544,9 @@ footer {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--container-shadow-color);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -515,7 +554,7 @@ footer {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #444;
+    color: var(--text-color);
 }
 
 .contact-form input,
@@ -523,7 +562,7 @@ footer {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--container-shadow-color);
     border-radius: 4px;
     font-size: 1em;
     font-family: 'Poppins', sans-serif;
@@ -531,15 +570,15 @@ footer {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: rgb(194, 110, 110);
+    border-color: var(--link-color);
     outline: none;
-    box-shadow: 0 0 5px rgba(194, 110, 110, 0.5);
+    box-shadow: 0 0 5px var(--link-color);
 }
 
 .contact-form button {
     display: inline-block;
-    background-color: rgb(194, 110, 110);
-    color: #fff;
+    background-color: var(--link-hover-color);
+    color: var(--footer-text-color);
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -549,7 +588,7 @@ footer {
 }
 
 .contact-form button:hover {
-    background-color: #a7444c;
+    background-color: var(--link-hover-color);
 }
 
 /* desain responsif */
@@ -748,7 +787,7 @@ footer {
     font-size: 0.9em; 
     padding: 5px 10px;
     text-decoration: none;
-    color: rgb(194, 110, 110);
+    color: var(--nav-text-color);
   }
 }
 
@@ -779,14 +818,14 @@ footer {
 .komentar-form {
     margin-top: 30px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--container-bg-color);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--container-shadow-color);
 }
 
 .komentar-form h3 {
     margin-bottom: 15px;
-    color: rgb(194, 110, 110);
+    color: var(--link-hover-color);
 }
 
 .komentar-form input,
@@ -794,14 +833,14 @@ footer {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--container-shadow-color);
     border-radius: 4px;
     font-size: 1em;
 }
 
 .komentar-form button {
-    background-color: rgb(194, 110, 110);
-    color: #fff;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -810,7 +849,7 @@ footer {
 }
 
 .komentar-form button:hover {
-    background-color: #a7444c;
+    background-color: var(--link-hover-color);
 }
 
 /* Daftar Komentar */
@@ -821,9 +860,9 @@ footer {
 .komentar-item {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #fff;
+    background-color: var(--container-bg-color);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--container-shadow-color);
 }
 
 .komentar-item p {
@@ -832,33 +871,33 @@ footer {
 
 .komentar-tanggal {
     font-size: 0.8em;
-    color: #888;
+    color: var(--text-color);
 }
 
 /* Rating */
 .rating-form {
     margin-top: 20px;
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: var(--container-bg-color);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--container-shadow-color);
 }
 
 .rating-form h3 {
     margin-bottom: 10px;
-    color: rgb(194, 110, 110);
+    color: var(--link-hover-color);
 }
 
 .rating-form select {
     padding: 10px;
     margin-right: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--container-shadow-color);
     border-radius: 4px;
 }
 
 .rating-form button {
-    background-color: rgb(194, 110, 110);
-    color: #fff;
+    background-color: var(--link-hover-color);
+    color: var(--footer-text-color);
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -867,97 +906,18 @@ footer {
 }
 
 .rating-form button:hover {
-    background-color: #a7444c;
+    background-color: var(--link-hover-color);
 }
 
 .rating-artikel {
     font-size: 1.2rem;
-    color: #444;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
 .blog-content .rating-artikel {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color);
     margin: 5px 0;
     font-weight: bold;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-header.dark-mode {
-    background-color: #1e1e1e;
-    border-bottom: 3px solid #333;
-}
-
-footer.dark-mode {
-    background-color: #1e1e1e; /* Warna footer gelap */
-    color: #e0e0e0; /* Warna teks footer */
-}
-
-nav ul li a.dark-mode {
-    color: #e0e0e0;
-}
-
-.blog-card.dark-mode {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-}
-
-.blog-card.dark-mode:hover {
-    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
-}
-
-footer.dark-mode {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-}
-
-.dark-mode-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #444;
-    transition: color 0.3s ease;
-}
-
-.dark-mode-toggle:hover {
-    color: #a7444c;
-}
-
-/* Form Komentar */
-.komentar-form.dark-mode {
-    background-color: #1e1e1e; 
-    color: #e0e0e0;
-    border: 1px solid #333; 
-}
-
-/* Artikel Detail */
-.artikel-container.dark-mode {
-    background-color: #1e1e1e; /* Warna latar belakang artikel */
-    color: #e0e0e0; /* Warna teks artikel */
-}
-
-.gambar-artikel.dark-mode {
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2); /* Bayangan gambar artikel */
-}
-
-/* Tombol Kembali */
-.linkkembali.dark-mode {
-    color: #a7444c; /* Warna tombol kembali */
-}
-
-.linkkembali.dark-mode:hover {    text-decoration: underline;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-    body.dark-mode {
-        background-color: #181818; /* Warna latar belakang untuk layar kecil */
-    }
 }
