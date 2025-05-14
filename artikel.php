@@ -4,25 +4,14 @@ include 'db.php';
 
 $id = $_GET['id'];
 
-if (isset($_POST['submit_rating'])) {
-    $rating = (int)$_POST['rating'];
-
-    // Validasi rating
-    if ($rating >= 1 && $rating <= 5) {
-        // Update rating di database
-        $update_query = "UPDATE blog SET rating = (rating + $rating) / 2 WHERE id = $id";
-        if (mysqli_query($conn, $update_query)) {
-            echo "<p>Terima kasih atas rating Anda!</p>";
-        } else {
-            echo "<p>Terjadi kesalahan: " . mysqli_error($conn) . "</p>";
-        }
-    } else {
-        echo "<p>Rating tidak valid.</p>";
-    }
-}
+// Ambil data artikel berdasarkan ID
 $query = "SELECT * FROM blog WHERE id = $id";
 $result = mysqli_query($conn, $query);
 $article = mysqli_fetch_assoc($result);
+
+// Ambil komentar berdasarkan ID artikel
+$comments_query = "SELECT * FROM comments WHERE article_id = $id ORDER BY created_at ASC";
+$comments_result = mysqli_query($conn, $comments_query);
 ?>
 
 <!DOCTYPE html>
@@ -43,21 +32,18 @@ $article = mysqli_fetch_assoc($result);
             <p><?php echo nl2br($article['content']); ?></p>
         </div>
          
+        <!-- Form Komentar -->
         <div class="komentar-form">
             <h3>Tinggalkan Komentar Disini</h3>
-            <form method="POST" action="">
+            <form method="POST" action="comments.php">
+                <input type="hidden" name="article_id" value="<?php echo $id; ?>">
                 <input type="text" name="name" placeholder="Nama Anda" required>
                 <textarea name="comment" placeholder="Tulis Tanggapan Anda" required></textarea>
-                <button type="submit">Kirim</button>
+                <button type="submit" name="submit_comment">Kirim</button>
             </form>
         </div>
 
-        <?php
-        // Ambil komentar berdasarkan ID artikel
-        $comments_query = "SELECT * FROM comments WHERE article_id = $id ORDER BY created_at ASC";
-        $comments_result = mysqli_query($conn, $comments_query);
-        ?>
-
+        <!-- Daftar Komentar -->
         <div class="komentar-list">
             <h3>Komentar</h3>
             <?php while ($comment = mysqli_fetch_assoc($comments_result)): ?>
@@ -69,9 +55,11 @@ $article = mysqli_fetch_assoc($result);
             <?php endwhile; ?>
         </div>
 
+        <!-- Form Rating -->
         <div class="rating-form">
             <h3>Beri Rating Artikel Ini</h3>
-            <form method="POST" action="">
+            <form method="POST" action="rating.php">
+                <input type="hidden" name="article_id" value="<?php echo $id; ?>">
                 <label for="rating">Pilih Rating:</label>
                 <select name="rating" id="rating" required>
                     <option value="1">1 - Sangat Buruk</option>
